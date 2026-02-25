@@ -58,7 +58,7 @@ public class TransactionService {
         BigDecimal amount = transferRequest.getAmount();
         if(fromAccount.getBalance().compareTo(amount) < 0){
             //There is no enough balance in the fromAccount so,
-            // we are cancelling thsi transaction
+            // we are cancelling this transaction
 
             Transaction failedTransaction = Transaction.builder()
                     .fromAccountId(fromAccount.getId())
